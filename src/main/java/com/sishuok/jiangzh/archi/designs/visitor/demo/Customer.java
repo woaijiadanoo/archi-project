@@ -2,7 +2,7 @@ package com.sishuok.jiangzh.archi.designs.visitor.demo;
 
 public abstract class Customer {
 
-    protected String name;
+    public String name;
 
     public Customer(String name){
         this.name = name;
@@ -12,5 +12,8 @@ public abstract class Customer {
 
     // 这种形式的修改是不友好的
     public abstract void analyze();
+
+    // 设计初期应该加入的内容
+    public abstract void accept(DemoVisitor demoVisitor);
 
 }

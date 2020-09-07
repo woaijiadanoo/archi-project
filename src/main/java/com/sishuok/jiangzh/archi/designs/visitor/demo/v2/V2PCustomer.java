@@ -1,6 +1,7 @@
-package com.sishuok.jiangzh.archi.designs.visitor.demo.v1;
+package com.sishuok.jiangzh.archi.designs.visitor.demo.v2;
 
 import com.sishuok.jiangzh.archi.designs.visitor.demo.Customer;
+import com.sishuok.jiangzh.archi.designs.visitor.demo.DemoVisitor;
 
 // 个人客户
 public class V2PCustomer extends Customer {
@@ -17,5 +18,10 @@ public class V2PCustomer extends Customer {
     @Override
     public void analyze() {
         System.out.println("个人客户价值分析");
+    }
+
+    @Override
+    public void accept(DemoVisitor demoVisitor) {
+        demoVisitor.visioPCustomer(this);
     }
 }

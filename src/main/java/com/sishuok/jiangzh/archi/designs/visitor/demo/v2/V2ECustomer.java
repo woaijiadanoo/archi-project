@@ -1,12 +1,12 @@
-package com.sishuok.jiangzh.archi.designs.visitor.demo.v1;
+package com.sishuok.jiangzh.archi.designs.visitor.demo.v2;
 
 import com.sishuok.jiangzh.archi.designs.visitor.demo.Customer;
 import com.sishuok.jiangzh.archi.designs.visitor.demo.DemoVisitor;
 
 // 企业客户
-public class V1ECustomer extends Customer {
+public class V2ECustomer extends Customer {
 
-    public V1ECustomer(String name){
+    public V2ECustomer(String name){
         super(name);
     }
 
@@ -22,7 +22,7 @@ public class V1ECustomer extends Customer {
 
     @Override
     public void accept(DemoVisitor demoVisitor) {
-
+        demoVisitor.visioECustomer(this);
     }
 
 }
