@@ -1,9 +1,12 @@
 package com.sishuok.jiangzh.archi.shopping.warehouse;
 
+import com.sishuok.jiangzh.archi.shopping.warehouse.visitors.SoldVisitor;
 import com.sishuok.jiangzh.archi.shopping.warehouse.vo.Grid;
 import com.sishuok.jiangzh.archi.shopping.warehouse.vo.Warehouse;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class WarehouseClient {
     public static void main(String[] args) {
@@ -12,6 +15,19 @@ public class WarehouseClient {
         // 打印整个仓库情况
         root.printStruct("");
 
+        ObjectStruct objectStruct = new ObjectStruct();
+        Map<String, WarehouseComponet> treeMap = new HashMap<>();
+        root.getChildren(treeMap);
+        for(String key : treeMap.keySet()){
+            objectStruct.addComponet(treeMap.get(key));
+        }
+
+        WarehouseVisitor visitor = new SoldVisitor(5);
+
+        objectStruct.soldNum(visitor);
+
+        // 打印整个仓库情况
+        root.printStruct("");
     }
 
     private static WarehouseComponet init(){
