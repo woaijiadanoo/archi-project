@@ -1,7 +1,5 @@
 package com.sishuok.jiangzh.archi.designs.flyweight.demo.v2;
 
-import com.sishuok.jiangzh.archi.designs.flyweight.impl.Flyweight;
-
 import java.util.HashMap;
 import java.util.Map;
 
