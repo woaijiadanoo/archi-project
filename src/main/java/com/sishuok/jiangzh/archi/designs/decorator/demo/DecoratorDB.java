@@ -10,8 +10,8 @@ public class DecoratorDB {
     // init 销售额
     static {
         db.put("Allen", 1000.0);
-        db.put("Jiangzh", 2000.0);
-        db.put("张三", 4000.0);
+        db.put("Jiangzh", 1000.0);
+        db.put("张三", 1000.0);
     }
 
 }
