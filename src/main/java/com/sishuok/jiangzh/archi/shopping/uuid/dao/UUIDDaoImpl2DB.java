@@ -5,7 +5,7 @@ import com.sishuok.jiangzh.archi.shopping.uuid.vo.UUIDModel;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UUIDDaoImpl implements UUIDDao{
+public class UUIDDaoImpl2DB implements UUIDDao{
 
     /*
         order - {businessType:order, uuid: 1}
