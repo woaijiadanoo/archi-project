@@ -15,17 +15,14 @@ public class UUIDStrategyServiceImpl implements UUIDService{
     @Override
     public String getUuid(String businessType, FormatModel fm, boolean needAlrogithm, IAlrogithmStrategy ias) {
         // 组织算法策略
-        IAlrogithmStrategy strategy = null;
-        if(needAlrogithm){
-            if(ias == null){
-                strategy = new DBAlrogithmImpl();
-            }else{
+        IAlrogithmStrategy strategy = new DBAlrogithmImpl();
+        if(needAlrogithm) {
+            if (ias != null) {
                 strategy = ias;
             }
         }
         AlrogithmlContext context = new AlrogithmlContext(strategy);
         context.setBusinessType(businessType);
-
         // 1，2，3
         String uuid = context.getUuid();
         // 是否需要格式化
