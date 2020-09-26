@@ -43,6 +43,13 @@ public class Client {
 
         String u2 = uuidService.getUuid(businessType, formatModel, true, null);
         System.out.println("order uuid = " + u2);
+
+        uuidService.getUuid("warehouse", formatModel, true, null);
+
+        for(int i=0;i<8;i++){
+            uuidService.getUuid(businessType, formatModel, true, null);
+        }
+
     }
 
     private static void step2(){
