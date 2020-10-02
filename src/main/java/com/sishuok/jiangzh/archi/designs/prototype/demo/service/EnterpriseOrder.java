@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class EnterpriseOrder implements PrototypeOrderAPI{
+public class EnterpriseOrder implements PrototypeOrderAPI,Cloneable{
 
     private String enterpriseName;
     private String producerId;
@@ -42,5 +42,27 @@ public class EnterpriseOrder implements PrototypeOrderAPI{
         PrototypeOrderAPI orderAPI =
                 new EnterpriseOrder(this.enterpriseName,this.producerId,this.enterpriceOrderNum);
         return orderAPI;
+    }
+
+    /*
+        Java自带的clone方法实现
+     */
+    public Object javaClone(){
+        Object object = null;
+        try {
+            object = super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return object;
+    }
+
+    @Override
+    public String toString() {
+        return "EnterpriseOrder{" +
+                "enterpriseName='" + enterpriseName + '\'' +
+                ", producerId='" + producerId + '\'' +
+                ", enterpriceOrderNum=" + enterpriceOrderNum +
+                '}';
     }
 }
