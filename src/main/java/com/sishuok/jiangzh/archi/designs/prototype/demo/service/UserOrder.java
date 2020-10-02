@@ -36,4 +36,11 @@ public class UserOrder implements PrototypeOrderAPI{
     public int getOrderNum() {
         return userOrderNum;
     }
+
+    @Override
+    public PrototypeOrderAPI clone() {
+        // 原型模式， 要把所有的属性尽量都拷贝下来
+        PrototypeOrderAPI orderAPI = new UserOrder(this.getUserName(),this.getProducerId(),this.userOrderNum);
+        return orderAPI;
+    }
 }

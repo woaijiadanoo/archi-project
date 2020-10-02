@@ -36,4 +36,11 @@ public class EnterpriseOrder implements PrototypeOrderAPI{
     public int getOrderNum() {
         return this.enterpriceOrderNum;
     }
+
+    @Override
+    public PrototypeOrderAPI clone() {
+        PrototypeOrderAPI orderAPI =
+                new EnterpriseOrder(this.enterpriseName,this.producerId,this.enterpriceOrderNum);
+        return orderAPI;
+    }
 }
