@@ -22,6 +22,6 @@ public abstract class ApprovalHandler {
         return manager;
     }
 
-    public abstract void approval(String userName,double fee);
+    public abstract void request(HandlerModel handlerModel);
 
 }
