@@ -13,7 +13,7 @@ public class ChainV2Client {
         director.setSuccessor(vp);
 
         // 具体业务处理
-        manager.approval(userName,fee);
+//        manager.approval(userName,fee);
 
     }
 
@@ -23,7 +23,7 @@ public class ChainV2Client {
         ApprovalHandler manager = ApprovalHandler.getApprovalHandler();
 
         // 具体业务处理
-        manager.approval(userName,fee);
+//        manager.approval(userName,fee);
 
     }
 
