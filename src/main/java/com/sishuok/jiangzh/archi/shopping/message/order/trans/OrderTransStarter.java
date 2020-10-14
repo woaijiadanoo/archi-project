@@ -12,10 +12,10 @@ public class OrderTransStarter {
 
     public static void main(String[] args) {
         // 启动Server
-//        startServer(port);
+        startServer(port);
 
         // 测试客户端
-        clientTest("order", wareHousePort);
+//        clientTest("order", wareHousePort);
     }
 
     private static void startServer(int port){
