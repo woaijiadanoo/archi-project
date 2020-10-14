@@ -10,6 +10,9 @@ public class WarehouseTest {
     public static void main(String[] args) {
         String houseId = "house01";
         connectionOrderTest(houseId);
+        connectionOrderTest(houseId);
+        connectionOrderTest(houseId);
+        connectionOrderTest(houseId);
     }
 
     public static void connectionOrderTest(String houseId){
