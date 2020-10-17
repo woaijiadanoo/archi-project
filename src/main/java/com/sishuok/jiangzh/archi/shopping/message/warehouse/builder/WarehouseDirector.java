@@ -38,19 +38,19 @@ public class WarehouseDirector {
         }
     }
 
-    private String postMessage(String pre,List<String> detailOrders){
-        StringBuffer sb = new StringBuffer();
-        sb.append(warehouseBuilder.getComma().getMessage());
+    private String postMessage(List<String> detailOrders){
+        warehouseBuilder.getComma().getMessage();
         for(String orderId : detailOrders){
-            sb.append(warehouseBuilder.getOrderId(orderId).getMessage());
-            sb.append(warehouseBuilder.getConnector().getMessage());
+            warehouseBuilder.getOrderId(orderId).getMessage();
+            warehouseBuilder.getConnector().getMessage();
         }
 
-        pre += sb.toString();
         // 去除最后一个连接符
-        pre = pre.substring(0, pre.length()-1);
+        String result = warehouseBuilder.getMessage();
 
-        return pre;
+        result = result.substring(0, result.length()-1);
+
+        return result;
     }
 
     // HO001-house01
@@ -68,27 +68,27 @@ public class WarehouseDirector {
 
     // HO004-house01,order3|order1|order2
     public String constructHO4(String houseId, List<String> detailOrders){
-        String pre = preMessage(WarehouseMsgTypeEnum.HO003.name(), houseId);
+        String pre = preMessage(WarehouseMsgTypeEnum.HO004.name(), houseId);
 
-        return postMessage(pre,detailOrders);
+        return postMessage(detailOrders);
     }
 
     public String constructHO5(String houseId, List<String> detailOrders){
-        String pre = preMessage(WarehouseMsgTypeEnum.HO003.name(), houseId);
+        String pre = preMessage(WarehouseMsgTypeEnum.HO005.name(), houseId);
 
-        return postMessage(pre,detailOrders);
+        return postMessage(detailOrders);
     }
 
     public String constructHO6(String houseId, List<String> detailOrders){
-        String pre = preMessage(WarehouseMsgTypeEnum.HO003.name(), houseId);
+        String pre = preMessage(WarehouseMsgTypeEnum.HO006.name(), houseId);
 
-        return postMessage(pre,detailOrders);
+        return postMessage(detailOrders);
     }
 
     public String constructHO7(String houseId, List<String> detailOrders){
-        String pre = preMessage(WarehouseMsgTypeEnum.HO003.name(), houseId);
+        String pre = preMessage(WarehouseMsgTypeEnum.HO007.name(), houseId);
 
-        return postMessage(pre,detailOrders);
+        return postMessage(detailOrders);
     }
 
 

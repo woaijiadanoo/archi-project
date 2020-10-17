@@ -26,16 +26,16 @@ public class WarehouseTransClient {
             oos.writeObject(str);
             oos.flush();
 
-//            ois = new ObjectInputStream(
-//                    new BufferedInputStream(
-//                            socket.getInputStream()
-//                    )
-//            );
-//
-//            Object response = ois.readObject();
-//            System.out.println("server response message : "+ response);
-//
-//            return response+"";
+            ois = new ObjectInputStream(
+                    new BufferedInputStream(
+                            socket.getInputStream()
+                    )
+            );
+
+            Object response = ois.readObject();
+            System.out.println("server response message : "+ response);
+
+            return response+"";
         }catch (Exception e){
             e.printStackTrace();
         }finally {
