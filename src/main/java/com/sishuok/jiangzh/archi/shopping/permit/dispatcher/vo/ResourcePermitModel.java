@@ -1,4 +1,6 @@
 package com.sishuok.jiangzh.archi.shopping.permit.dispatcher.vo;
 
-public class ResourcePermitModel {
+import com.sishuok.jiangzh.archi.shopping.permit.dispatcher.api.base.BaseVO;
+
+public class ResourcePermitModel extends BaseVO {
 }

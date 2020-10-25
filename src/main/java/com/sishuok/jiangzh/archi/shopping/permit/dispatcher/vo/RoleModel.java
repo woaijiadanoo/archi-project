@@ -1,4 +1,6 @@
 package com.sishuok.jiangzh.archi.shopping.permit.dispatcher.vo;
 
-public class RoleModel {
+import com.sishuok.jiangzh.archi.shopping.permit.dispatcher.api.base.BaseVO;
+
+public class RoleModel extends BaseVO {
 }
